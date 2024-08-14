@@ -1,5 +1,6 @@
 from typing_extensions import Literal, TypeAlias
 
+# https://github.com/bogdanfinn/tls-client/blob/master/profiles/profiles.go
 ClientIdentifiers: TypeAlias = Literal[
     # Chrome
     "chrome_103",
@@ -16,13 +17,16 @@ ClientIdentifiers: TypeAlias = Literal[
     "chrome_116_PSK_PQ",
     "chrome_117",
     "chrome_120",
+    "chrome_124",
     # Safari
     "safari_15_6_1",
     "safari_16_0",
     # iOS (Safari)
+    "safari_ipad_15_6",
     "safari_ios_15_5",
     "safari_ios_15_6",
     "safari_ios_16_0",
+    "safari_ios_17_0",
     # iPadOS (Safari)
     "safari_ios_15_6",
     # FireFox
@@ -34,6 +38,7 @@ ClientIdentifiers: TypeAlias = Literal[
     "firefox_110",
     "firefox_117",
     "firefox_120",
+    "firefox_123",
     # Opera
     "opera_89",
     "opera_90",
@@ -51,14 +56,24 @@ ClientIdentifiers: TypeAlias = Literal[
     "zalando_android_mobile",
     "nike_ios_mobile",
     "nike_android_mobile",
+    "cloudscraper",
     "mms_ios",
+    "mms_ios_1",
     "mms_ios_2",
     "mms_ios_3",
     "mesh_ios",
+    "mesh_ios_1",
     "mesh_ios_2",
     "mesh_android",
+    "mesh_android_1",
     "mesh_android_2",
     "confirmed_ios",
     "confirmed_android",
-    "confirmed_android_2",
+    "confirmed_android_7",
+    "confirmed_android_8",
+    "confirmed_android_9",
+    "confirmed_android_10",
+    "confirmed_android_11",
+    "confirmed_android_12",
+    "confirmed_android_13",
 ]

@@ -1,10 +1,10 @@
-from .structures import CaseInsensitiveDict
-
-from http.cookiejar import CookieJar, Cookie
-from typing import MutableMapping, Union, Any
-from urllib.parse import urlparse, urlunparse
-from http.client import HTTPMessage
 import copy
+from http.client import HTTPMessage
+from http.cookiejar import Cookie, CookieJar
+from typing import Any, MutableMapping, Union
+from urllib.parse import urlparse, urlunparse
+
+from .structures import CaseInsensitiveDict
 
 try:
     import threading
@@ -240,7 +240,7 @@ class RequestsCookieJar(CookieJar, MutableMapping):
         dictionary = {}
         for cookie in iter(self):
             if (domain is None or cookie.domain == domain) and (
-                path is None or cookie.path == path
+                    path is None or cookie.path == path
             ):
                 dictionary[cookie.name] = cookie.value
         return dictionary
@@ -275,9 +275,9 @@ class RequestsCookieJar(CookieJar, MutableMapping):
 
     def set_cookie(self, cookie, *args, **kwargs):
         if (
-            hasattr(cookie.value, "startswith")
-            and cookie.value.startswith('"')
-            and cookie.value.endswith('"')
+                hasattr(cookie.value, "startswith")
+                and cookie.value.startswith('"')
+                and cookie.value.endswith('"')
         ):
             cookie.value = cookie.value.replace('\\"', "")
         return super().set_cookie(cookie, *args, **kwargs)
@@ -432,12 +432,13 @@ def merge_cookies(cookiejar: RequestsCookieJar, cookies: Union[dict, RequestsCoo
 
     return cookiejar
 
+
 def extract_cookies_to_jar(
         request_url: str,
         request_headers: CaseInsensitiveDict,
         cookie_jar: RequestsCookieJar,
         response_headers: dict
-    ) -> RequestsCookieJar:
+) -> RequestsCookieJar:
     response_cookie_jar = cookiejar_from_dict({})
 
     req = MockRequest(request_url, request_headers)
