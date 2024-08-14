@@ -4,15 +4,15 @@ shared_library_version = "1.7.7"
 github_download_url = "https://github.com//bogdanfinn/tls-client/releases/download/v{}/{}"
 github_repo_filenames = [
     # Windows
-    f"tls-client-windows-32-v{shared_library_version}.dll",
-    f"tls-client-windows-64-v{shared_library_version}.dll",
+    f"tls-client-windows-32-{shared_library_version}.dll",
+    f"tls-client-windows-64-{shared_library_version}.dll",
     # MacOS
-    f"tls-client-darwin-arm64-v{shared_library_version}.dylib",
-    f"tls-client-darwin-amd64-v{shared_library_version}.dylib",
+    f"tls-client-darwin-arm64-{shared_library_version}.dylib",
+    f"tls-client-darwin-amd64-{shared_library_version}.dylib",
     # Linux
-    f"tls-client-linux-alpine-amd64-v{shared_library_version}.so",
-    f"tls-client-linux-ubuntu-amd64-v{shared_library_version}.so",
-    f"tls-client-linux-arm64-v{shared_library_version}.so"
+    f"tls-client-linux-alpine-amd64-{shared_library_version}.so",
+    f"tls-client-linux-ubuntu-amd64-{shared_library_version}.so",
+    f"tls-client-linux-arm64-{shared_library_version}.so"
 ]
 dependency_filenames = [
     # Windows
