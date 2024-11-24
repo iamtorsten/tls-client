@@ -315,7 +315,7 @@ def build_response(res: Union[dict, list], res_cookies: RequestsCookieJar, filep
     # Add status code
     response.status_code = res["status"]
     # Add headers
-    response_headers = {}
+    response_headers = CaseInsensitiveDict()
     if res["headers"] is not None:
         for header_key, header_value in res["headers"].items():
             if len(header_value) == 1:
