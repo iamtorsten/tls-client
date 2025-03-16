@@ -25,7 +25,7 @@ setup(
     version=about["__version__"],
     author=about["__author__"],
     description=about["__description__"],
-    license = { about["__license__"] },
+    license = "MIT",
     long_description=readme,
     long_description_content_type="text/markdown",
     packages=find_packages(),
