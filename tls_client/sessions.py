@@ -100,14 +100,16 @@ class Session:
         # --- Standard Settings ----------------------------------------------------------------------------------------
 
         # Case-insensitive dictionary of headers, send on each request
-        self.headers = CaseInsensitiveDict(
-            {
-                "User-Agent": f"tls-client/{__version__}",
-                "Accept-Encoding": "gzip, deflate, br",
-                "Accept": "*/*",
-                "Connection": "keep-alive",
-            }
-        )
+        # self.headers = CaseInsensitiveDict(
+        #     {
+        #         "User-Agent": f"tls-client/{__version__}",
+        #         "Accept-Encoding": "gzip, deflate, br",
+        #         "Accept": "*/*",
+        #         "Connection": "keep-alive",
+        #     }
+        # )
+        self.headers = {}
+
 
         # Example:
         # {
